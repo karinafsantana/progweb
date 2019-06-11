@@ -1,0 +1,21 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 26px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.dia{
+    background-color: #ffff00;
+    color: #f00;
+}
+
+.tarde{
+    background-color: #f60;
+    color: #60f;
+}
+
+.noite{
+    background-color: #20f;
+    color: #f60;
+}

@@ -1,0 +1,42 @@
+body {
+    background-color: grey;
+    color: #FFF;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15%;
+    font-weight: bold
+}
+
+input {
+    height: 35px;
+    width: 220px;
+    border: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #423d49;
+    font-family: Arial;
+    border-radius: 10px;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.par {
+    color: green;
+}
+
+.impar {
+    color: red;
+}
+
+.orange {
+    color: orange;
+} 
+
+.blue {
+    color: blue;
+}

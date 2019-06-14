@@ -1,3 +1,23 @@
+<?php
+if(isset($_GET["enviar"])){
+    $txtnome         =$_GET["txt-nome"];
+    $txtcurso        =$_GET["txt-curso"];
+    $txtcargahoraria =$_GET["txt-carga-horaria"];
+    $txtcargadia     =$_GET["txt-carga-dia"];
+    $txtfrequencia   =$_GET["txt-frequencia"];
+
+    $diastotaisdocurso = $txtcargahoraria/$txtcargadia;
+    $qtddefaltasemdias = $diastotaisdocurso*((100-$txtfrequencia)/100);
+
+    $frase  = "Olá ".$txtnome.", bem-vindis ao curso ".$txtcurso." , acarga horária total deste curso";
+    $frase .= "é de ".$txtcargahoraria." horas.A carga horária por dia é de ".$txtcargadia ." horas, o que";
+    $frase .= "equivale a ".$diastotaisdocurso." dias de curso total . A frequência obrigatória";
+    $frase .= "é de ".$txtfrequencia."% , ou seja, você poderá faltar no total ".$qtddefaltasemdias." dias.";
+}else{
+    $frase ="Informe os dados no formulário a cima";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,7 +38,7 @@
             
             <form action="#" id="formulario" method -$_GET>
                 <label for="">Nome Completo</label>
-                <input type="text"id="txt-nome"name="txt-nome"size="100" placeholder="Digite seu Nome">
+                <input type="text"id="txt-nome"name="txt-nome"size="100" placeholder="Digite seu nome completo">
 
                 <label for="">Nome Curso</label>
                 <input type="text"id="txt-curso"name="txt-curso"size="70">
@@ -33,18 +53,20 @@
                 <input type="text"id="txt-frequencia"name="txt-frequencia"size="10" placeholder="valor em %">
 
                 <br>
-                <input type="submit"value="calcular">
+                <input type="submit" name="enviar" value="calcular">
 
                 <br>
-                <span class="resulta"></span>
-                <span class="resultado"></span>
-                <span class="resultado"></span>
+                <span class="resulta">
+                    <?php echo $frase;?>
+                </span>
+                
 
 
             </form>
 
             <?php
-            if(isset($_GET["txt-carga-horaria"]))
+            if(isset($_GET["txt-carga-horaria"])){
+            }
             ?>
         </div>    
     </section>

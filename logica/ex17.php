@@ -1,6 +1,6 @@
-<form action="ex04.php" method="get">
-        <input type="text" required-name="palavra" placeholder="Informe uma palavra">
-        <input type="text" required-name="placehoider" qtb="Informe a quantidade">
+<form action="ex17.php" method="get">
+        <input type="text" required name="palavra" placeholder="Informe uma palavra">
+        <input type="text" required name="qtd" qtb="Informe a quantidade">
         <input type="submit" value="Calcular">
     </form>
 
@@ -9,14 +9,12 @@
             $palavra  =$_GET["palavra"];
             $qtd      =$_GET["qtd"];
             $frase    =$palavra;
-            $novafrase=$palavra
-            for($x=0;$x<$qtd;$x++){
-                echo $frase;
-                echo "<br>";
+            $novafrase=$palavra;
+            for($x=1;$x<$qtd;$x++){ 
                 $frase = $frase." ".$palavra;
                 $novafrase = $frase."<br>".$novafrase;
             }    
-            
+            echo $novafrase;
         }else{
             echo "Informe os campos acima";
         }

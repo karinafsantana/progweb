@@ -1,0 +1,68 @@
+/*encapsulador*/
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1024px;
+}
+/*estilo da lista*/
+.wrapper ul{
+    list-style: none;
+}
+/*estilo inicial dos icones*/
+.wrapper ul li{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10%;
+    border: 5px solid#d8e2dc;
+    float: left;
+    transition: all 0.5s ease;
+}
+.wrapper ul li .fa{
+    color: #b2b8b3;
+    margin-top: 35px;
+    transition: all 0.5s ease;
+}
+
+
+.wrapper ul li:hover .bullhorn{
+    border: 5px solid #3b5998;
+    box-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-bullhorn{
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5 ease;
+
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+
+.wrapper ul li:hover.gift{
+    border: 5px solid #00aced;
+    box-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease; 
+}
+.wrapper ul li:hover .fa-gift{
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5 ease;
+    animation: zoom 0.5s alternate infinite ease-in;
+}
+
+@keyframes zoom{
+    0% {transform: scale(.8);}
+    100%{transition: scale(1.5);}
+}
+
+
+
+

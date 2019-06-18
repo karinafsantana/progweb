@@ -23,29 +23,26 @@
     float: left;
     transition: all 0.5s ease;
 }
-.wrapper ul li .fa{
+.wrapper ul li .fa,.fab{
     color: #b2b8b3;
     margin-top: 35px;
     transition: all 0.5s ease;
 }
-
-
-.wrapper ul li:hover .bullhorn{
+/*anime1*/
+.wrapper ul li:hover.bullhorn{
     border: 5px solid #3b5998;
     box-shadow: 0 0 15px #3b5998;
     transition: all 0.5s ease;
 }
-
 .wrapper ul li:hover .fa-bullhorn{
     color: #3b5998;
     text-shadow: 0 0 15px #3b5998;
     transition: all 0.5 ease;
-
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -o-transform: rotate(360deg);
 }
-
+/*anime2*/
 .wrapper ul li:hover.gift{
     border: 5px solid #00aced;
     box-shadow: 0 0 15px #00aced;
@@ -57,12 +54,81 @@
     transition: all 0.5 ease;
     animation: zoom 0.5s alternate infinite ease-in;
 }
+/*anime3*/
+.wrapper ul li:hover.grimace{
+    border: 5px solid #eb6416;
+    box-shadow: 0 0 15px #eb6416;
+    transition: all 0.5s ease;  
+}
+.wrapper ul li:hover .fa-grimace{
+    color: #f2f60c;
+    text-shadow: 0 0 15px #f6750c;
+    transition: all 0.5 ease;
+    animation: exemplo 1.5s alternate infinite ease-in;
 
+}
+/*anime4*/
+.wrapper ul li:hover.whatsapp{
+    border: 5px solid #e8eb16;
+    box-shadow: 0 0 15px #eb16ab;
+    transition: all 0.5s ease;    
+}
+.wrapper ul li:hover .fa-whatsapp{
+    color: #076627;
+    text-shadow: 0 0 15px #110800;
+    transition: all 0.5 ease;
+    animation: zoomIn 0.5s alternate infinite ease-in;
+}
+/*anime5*/
+.wrapper ul li:hover.facebook{
+    border: 5px solid #0d09f6f8;
+    box-shadow: 0 0 15px #3107eb7c;
+    transition: all 0.5s ease;  
+}
+.wrapper ul li:hover .fa-facebook{
+    color: #076627;
+    text-shadow: 0 0 15px #f87808;
+    transition: all 0.5 ease;
+    animation: pulse 0.5s alternate infinite ease-in; 
+}
+ /*animação*/
 @keyframes zoom{
     0% {transform: scale(.8);}
     100%{transition: scale(1.5);}
 }
+@keyframes exemplo{
+    from {color: rgb(240, 14, 14);}
+    to {color: #ebc20d;}
+}
+@keyframes exemplo4{
+    0% {transform: scale(.8);}
+    100%{transition: scale(2.5);}
+}
 
-
-
-
+@keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    40% {
+      -webkit-transform: scale3d(1.00, 1.00, 1.00);
+      transform: scale3d(2.00, 2.00, 2.00);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }

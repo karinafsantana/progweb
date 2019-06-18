@@ -13,6 +13,9 @@
         <ul>
            <li class="bullhorn"><i class="fa fa-bullhorn fa-5x" aria-hidden="true"></i></li>
            <li class="gift"><i class="fa fa-gift fa-5x" aria-hidden="true"></i></li>
+           <li class="grimace"><i class="fa fa-grimace fa-5x" aria-hidden="true"></i></li>
+           <li class="whatsapp"><i class="fab fa-whatsapp fa-5x" aria-hidden="true"></i></li>
+           <li class="facebook"><i class="fab fa-facebook fa-5x" aria-hidden="true"></i></li>
         </ul>
     </div>
 </body>

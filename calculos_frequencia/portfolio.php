@@ -18,7 +18,6 @@
            <li class="facebook"><i class="fab fa-facebook fa-5x" aria-hidden="true"></i></li>
            <li class="car-alt"><i class="fas fa-car-alt fa-5x" aria-hidden="true"></i></li>
            <li class="istragram"><i class="fab fa-instagram fa-5x"></i></li>
-
         </ul>
     </div>
 </body>

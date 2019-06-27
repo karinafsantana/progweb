@@ -1,0 +1,402 @@
+body{
+    background-color: rgba(17, 16, 17, 0.404);
+ }
+ 
+/*encapsulador*/
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1024px;
+}
+/*estilo da lista*/
+.wrapper ul{
+    list-style: none;
+}
+/*estilo inicial dos icones*/
+.wrapper ul li{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10%;
+    border: 5px solid#d8e2dc;
+    float: left;
+    transition: all 0.5s ease;
+}
+.wrapper ul li .fa,.fab{
+    color: #b2b8b3;
+    margin-top: 35px;
+    transition: all 0.5s ease;
+}
+/*anime1*/
+.wrapper ul li:hover.bullhorn{
+    border: 5px solid #3b5998;
+    box-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-bullhorn{
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5 ease;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+/*anime2*/
+.wrapper ul li:hover.gift{
+    border: 5px solid #00aced;
+    box-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease; 
+}
+.wrapper ul li:hover .fa-gift{
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5 ease;
+    animation: zoom 0.5s alternate infinite ease-in;
+}
+/*anime3*/
+.wrapper ul li:hover.grimace{
+    border: 5px solid #eb6416;
+    box-shadow: 0 0 15px #eb6416;
+    transition: all 0.5s ease;  
+}
+.wrapper ul li:hover .fa-grimace{
+    color: #f2f60c;
+    text-shadow: 0 0 15px #f6750c;
+    transition: all 0.5 ease;
+    animation: exemplo 1.5s alternate infinite ease-in;
+
+}
+/*anime4*/
+.wrapper ul li:hover.whatsapp{
+    border: 5px solid #e8eb16;
+    box-shadow: 0 0 15px #eb16ab;
+    transition: all 0.5s ease;    
+}
+.wrapper ul li:hover .fa-whatsapp{
+    color: #076627;
+    text-shadow: 0 0 15px #110800;
+    transition: all 0.5 ease;
+    animation: zoomIn 0.5s alternate infinite ease-in;
+}
+/*anime5*/
+.wrapper ul li:hover.facebook{
+    border: 5px solid #0d09f6f8;
+    box-shadow: 0 0 15px #3107eb7c;
+    transition: all 0.5s ease;  
+}
+.wrapper ul li:hover .fa-facebook{
+    color: #076627;
+    text-shadow: 0 0 15px #f87808;
+    transition: all 0.5 ease;
+    animation: pulse 0.5s alternate infinite ease-in; 
+}
+/*anime6*/
+.wrapper ul li:hover.instagram{
+    border: 5px solid #a92ef0f8;
+    box-shadow: 0 0 15px #5504337c;
+    transition: all 0.5s ease; 
+ }
+ .wrapper ul li:hover .fa-instagram{
+    color: #076627;
+    text-shadow: 0 0 15px #f87808;
+    transition: all 0.5 ease;
+    animation: jackInTheBox 0.5s alternate infinite ease-in;
+ }
+ /*anime7*/
+ .wrapper ul li:hover.car-alt{
+    border: 5px solid #a92ef0f8;
+    box-shadow: 0 0 15px #5504337c;
+    transition: all 0.5s ease; 
+ }
+ .wrapper ul li:hover .fa-car-alt{
+    color: #8b446c;
+    text-shadow: 0 0 15px #0c08f8;
+    transition: all 0.5 ease;
+    animation: zoomOutUp 0.5s alternate infinite ease-in;
+ }
+ 
+ /*animação*/
+@keyframes zoom{
+    0% {transform: scale(.8);}
+    100%{transition: scale(1.5);}
+}
+@keyframes exemplo{
+    from {color: rgb(240, 14, 14);}
+    to {color: #ebc20d;}
+}
+@keyframes exemplo4{
+    0% {transform: scale(.8);}
+    100%{transition: scale(2.5);}
+}
+
+@keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    40% {
+      -webkit-transform: scale3d(1.00, 1.00, 1.00);
+      transform: scale3d(2.00, 2.00, 2.00);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes jackInTheBox {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(0.1) rotate(30deg);
+      transform: scale(0.1) rotate(30deg);
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+    }
+     50% {
+      -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+    }
+     70% {
+      -webkit-transform: rotate(3deg);
+      transform: rotate(3deg);
+    }
+     to {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+ }
+ @keyframes zoomOutUp {
+    50% {
+      opacity: 1;
+      -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+      transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+      -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+     to {
+      opacity: 0;
+      -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+      transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+      -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+ }
+ ody{
+    background-color: rgba(17, 16, 17, 0.404);
+ }
+ /*encapsulador*/
+ .wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1024px;
+ }
+ /*estilo da lista*/
+ .wrapper ul{
+    list-style: none;
+ }
+ /*estilo inicial dos icones*/
+ .wrapper ul li{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10%;
+    border: 5px solid#d8e2dc;
+    float: left;
+    transition: all 0.5s ease;
+ }
+ .wrapper ul li .fa,.fab,.fas{
+    color: #b2b8b3;
+    margin-top: 35px;
+    transition: all 0.5s ease;
+ }
+ /*anime1*/
+ .wrapper ul li:hover.bullhorn{
+    border: 5px solid #3b5998;
+    box-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+ }
+ .wrapper ul li:hover .fa-bullhorn{
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5 ease;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+ }
+ /*anime2*/
+ .wrapper ul li:hover.gift{
+    border: 5px solid #00aced;
+    box-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+ }
+ .wrapper ul li:hover .fa-gift{
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5 ease;
+    animation: zoom 0.5s alternate infinite ease-in;
+ }
+ /*anime3*/
+ .wrapper ul li:hover.grimace{
+    border: 5px solid #eb6416;
+    box-shadow: 0 0 15px #eb6416;
+    transition: all 0.5s ease; 
+ }
+ .wrapper ul li:hover .fa-grimace{
+    color: #f2f60c;
+    text-shadow: 0 0 15px #f6750c;
+    transition: all 0.5 ease;
+    animation: exemplo 1.5s alternate infinite ease-in;
+ 
+ }
+ /*anime4*/
+ .wrapper ul li:hover.whatsapp{
+    border: 5px solid #e8eb16;
+    box-shadow: 0 0 15px #eb16ab;
+    transition: all 0.5s ease;   
+ }
+ .wrapper ul li:hover .fa-whatsapp{
+    color: #076627;
+    text-shadow: 0 0 15px #110800;
+    transition: all 0.5 ease;
+    animation: zoomIn 0.5s alternate infinite ease-in;
+ }
+ /*anime5*/
+ .wrapper ul li:hover.facebook{
+    border: 5px solid #0d09f6f8;
+    box-shadow: 0 0 15px #3107eb7c;
+    transition: all 0.5s ease; 
+ }
+ .wrapper ul li:hover .fa-facebook{
+    color: #076627;
+    text-shadow: 0 0 15px #f87808;
+    transition: all 0.5 ease;
+    animation: pulse 0.5s alternate infinite ease-in;
+ }
+ /*anime6*/
+ .wrapper ul li:hover.instagram{
+    border: 5px solid #a92ef0f8;
+    box-shadow: 0 0 15px #5504337c;
+    transition: all 0.5s ease; 
+ }
+ .wrapper ul li:hover .fa-instagram{
+    color: #076627;
+    text-shadow: 0 0 15px #f87808;
+    transition: all 0.5 ease;
+    animation: jackInTheBox 0.5s alternate infinite ease-in;
+ }
+ /*anime7*/
+ .wrapper ul li:hover.car-alt{
+    border: 5px solid #a92ef0f8;
+    box-shadow: 0 0 15px #5504337c;
+    transition: all 0.5s ease; 
+ }
+ .wrapper ul li:hover .fa-car-alt{
+    color: #8b446c;
+    text-shadow: 0 0 15px #0c08f8;
+    transition: all 0.5 ease;
+    animation: zoomOutUp 0.5s alternate infinite ease-in;
+ }
+ /*animação*/
+@keyframes zoom{
+    0% {transform: scale(.8);}
+    100%{transition: scale(1.5);}
+}
+@keyframes exemplo{
+    from {color: rgb(240, 14, 14);}
+    to {color: #ebc20d;}
+ }
+@keyframes exemplo4{
+    0% {transform: scale(.8);}
+    100%{transition: scale(2.5);}
+ }
+ 
+@keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+     50% {
+      opacity: 1;
+    }
+ }
+@keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+     40% {
+      -webkit-transform: scale3d(1.00, 1.00, 1.00);
+      transform: scale3d(2.00, 2.00, 2.00);
+    }
+     to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+ }
+@keyframes jackInTheBox {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(0.1) rotate(30deg);
+      transform: scale(0.1) rotate(30deg);
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+    }
+     50% {
+      -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+    }
+     70% {
+      -webkit-transform: rotate(3deg);
+      transform: rotate(3deg);
+    }
+     to {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+ }
+@keyframes zoomOutUp {
+    50% {
+      opacity: 1;
+      -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+      transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+      -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+     to {
+      opacity: 0;
+      -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+      transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+      -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+ }
+ 

@@ -49,10 +49,11 @@ if(isset($_POST["submit"])){
             $valorParcelas = $montante/$parcelas; 
             ?>
 
-            <table border="1">
+            <table border ="1">
                 <tr>
                     <th>Parcelas</th>
                     <th>Valor</th>
+                    <th>Pagamento</th>
                 </tr>
                 <?php
                 for($x=1;$x<($parcelas+1);$x++){
@@ -60,12 +61,14 @@ if(isset($_POST["submit"])){
                 <tr>
                     <td><?php echo $x; ?>ª parcelas</td>
                     <td><?php echo $valorParcelas;?></td>
+                    <td><?php echo date('d/m/Y', mktime(0, 0, 0, date('m')+$x, 1, date('Y')));?></td>
                 </tr> 
                 <?php
                 }           
                 ?>  
             </table>
             <h3>Valor final: <?php echo $montante;?></h3>
+            <h4>Primeira parcela: <?php echo date('d/m/Y', mktime(0, 0, 0, date('m')+1, 1, date('Y')));?></h4>
         </div>
     <?php
     }

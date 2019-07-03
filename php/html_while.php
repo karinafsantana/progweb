@@ -17,13 +17,11 @@ if(isset($_POST["submit"])){
                         );
             break;
         case 3:
-            $produtos = null;
+            $produtos = array();
             break;
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html >
 <head>
@@ -44,13 +42,20 @@ if(isset($_POST["submit"])){
         </form>
     </div>
 <?php
-
+if(isset($_POST["submit"])){
 ?>
-    <div id="resultado"></div>
+    <div id="resultado">
+        <?php
+        $linha=0;
+        while($linha < count($produtos)){
+            echo "Nome: ".$produtos[$linha]["nome"]."<br>";
+            $linha++;
+        }
+        ?>
+    </div>
 <?php
-
+}
 ?>
-
     <!-- Restante da estrutura html -->
 </body>
 </html>
